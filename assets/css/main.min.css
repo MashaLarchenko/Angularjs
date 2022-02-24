@@ -1,0 +1,1 @@
+.card__container{display:grid;grid-template-columns:repeat(3,1fr);grid-gap:15px}.card__item{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-align:center;align-items:center;background:#f0f8ff;border:1px solid #000;border-radius:10px}
