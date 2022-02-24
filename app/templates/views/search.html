@@ -1,5 +1,7 @@
-<input type="text" placeholder="Enter repository name" ng-model="searchQuery" />
-<button ng-click="$ctrl.search()">Search</button>
+<div class="search__container">
+  <input type="text" placeholder="Enter repository name" ng-model="searchQuery" class="search__input"/>
+  <button ng-click="$ctrl.search()" class="search__btn">Search</button>
+</div>
 
 
 <div ui-view></div>

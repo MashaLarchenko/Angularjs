@@ -1,17 +1,12 @@
 angular.module('app').component('result', {
   templateUrl: "./app/templates/views/result.html",
-  controller: function ($scope, state) {
-    console.log(state, 'SASL;KS')
+  controller: function ($state, $scope, state) {
     $scope.repoData = state.data.items;
-    console.log('search', state,  $scope.repoData);
 
+    this.cardClick = function (data) {
+      state.authorData = data;
+      $state.go("author", { authorName: state.authorData.login});
+      console.log(data, 'DATA', state);
+    }
   }
 })
-
-
-// angular.module("result",["search"])
-// var searchBar = {
-//   name: 'searchBar',
-//   url: '/',
-//   component: 'searchBar'
-// }

@@ -1,0 +1,12 @@
+<div class="author__container">
+  <img src={{authorData.avatar_url}} alt="{{authorData.login}} avatar" />
+  <p class="author__name">Name : {{authorData.login}}</p>
+  <a href="{{authorData.url}}">Link to github</a>
+  AUTHOR PAGE
+  <!-- <p class="author__name">Repository name : {{data.name}}</p>
+    <p class="author__author-name">Author: {{data.owner.login}}</p>
+    <p class="author__language">Language: {{data.language || 'not difine'}}</p>
+    <p class="author__stars">Stars: {{stargazers_count}}</p> -->
+</div>
+
+<div ui-view></div>

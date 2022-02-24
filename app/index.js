@@ -10,7 +10,6 @@ myApp
   .config(['$urlRouterProvider', '$stateProvider', function ($urlRouterProvider, $stateProvider) {
 
     $urlRouterProvider.otherwise('/');
-
     var homeState = {
       name: 'searchBar',
       url: '/',
@@ -18,21 +17,27 @@ myApp
     }
 
     var resultState = {
-      name: 'result',
-      url: '/result',
+      name: 'search',
+      url: '/search?query&page',
+      params: {
+        query: '',
+        page: '' ,
+      },
       component: 'result'
-
     }
 
-    var aboutState = {
-      name: 'about',
-      url: '/about',
-      template: '<h3>Its the UI-Router hello world app!</h3>'
+    var authorState = {
+      name: 'author',
+      url: '/author?authorName',
+      params: {
+        authorName: '',
+      },
+      component: 'author'
     }
 
     $stateProvider.state(resultState);
     $stateProvider.state(homeState);
-    $stateProvider.state(aboutState);
+    $stateProvider.state(authorState);
   }]);
 
   myApp.factory('state', function () {

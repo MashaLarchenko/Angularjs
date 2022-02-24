@@ -14,19 +14,19 @@ const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require('gulp-cssnano');
 const concat = require('gulp-concat');
-const clean = require('gulp-clean');
+// const clean = require('gulp-clean');
 // const imagemin = require('gulp-imagemin');
 const changed = require('gulp-changed');
 const browsersync = require('browser-sync').create();
 
 // Clean assets
 
-function clear() {
-  return src('./assets/*', {
-          read: false
-      })
-      .pipe(clean());
-}
+// function clear() {
+//   return src('./assets/*', {
+//           read: false
+//       })
+//       .pipe(clean());
+// }
 
 // JS function 
 
@@ -75,7 +75,7 @@ function css() {
 // Watch files
 
 function watchFiles() {
-  watch('./app/scss/*', ['css', 'sass']);
+  watch('./app/scss/*', css);
   watch('./app/js/*', js);
   // watch('./src/img/*', img);
 }

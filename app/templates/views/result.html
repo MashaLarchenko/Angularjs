@@ -1,10 +1,12 @@
-<input type="text" placeholder="Enter repository name" ng-model="searchQuery" />
-<button ng-click="$ctrl.search()">Search</button>
+<div class="search__container">
+  <input type="text" placeholder="Enter repository name" ng-model="searchQuery" class="search__input"/>
+  <button ng-click="$ctrl.search()" class="search__btn">Search</button>
+</div>
 <div class="card__container">
-  <div class="card__item" ng-repeat="data in repoData">
-    <p class="card__name">{{data.name}}</p>
-    <p class="card__author-name">{{data.owner.login}}</p>
-    <p class="card__language">{{data.language || 'not difine'}}</p>
-    <p class="card__stars">{{stargazers_count}}</p>
-    </div>
+  <div class="card__item" ng-repeat="data in repoData" ng-click="$ctrl.cardClick(data.owner)">
+    <p class="card__name">Repository name : {{data.name}}</p>
+    <p class="card__author-name">Author: {{data.owner.login}}</p>
+    <p class="card__language">Language: {{data.language || 'not difine'}}</p>
+    <p class="card__stars">Stars: {{stargazers_count}}</p>
+  </div>
 </div>
