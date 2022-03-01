@@ -20,6 +20,10 @@
   "homepage": "https://github.com/MashaLarchenko/Angularjs#readme",
   "devDependencies": {
     "browser-sync": "^2.27.7",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-changed": "^4.0.3",

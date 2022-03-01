@@ -43,5 +43,8 @@ myApp
   myApp.factory('state', function () {
     return {
       data: '',
+      page: 1,
+      total: 0,
+      query: '',
     }
   })
