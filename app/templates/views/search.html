@@ -1,0 +1,8 @@
+<div class="search__container">
+  <input type="text" placeholder="Enter repository name" ng-model="searchQuery"
+    ng-keypress="$event.keyCode == 13 ? $ctrl.search() : null" class="search__input" />
+  <button ng-click="$ctrl.search()" class="search__btn button">Search</button>
+</div>
+
+
+<div ui-view></div>

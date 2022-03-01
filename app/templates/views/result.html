@@ -1,0 +1,19 @@
+<div class="search__container">
+  <input type="text" placeholder="Enter repository name" ng-model="searchQuery"
+    ng-keypress="$event.keyCode == 13 ? $ctrl.search() : null" class="search__input" />
+  <button ng-click="$ctrl.search()" class="search__btn button">Search</button>
+</div>
+<div class="card__container">
+  <div class="card__item" ng-repeat="data in repoData" ng-click="$ctrl.cardClick(data.owner)">
+    <p class="card__name">Repository name : {{data.name}}</p>
+    <p class="card__author-name">Author: {{data.owner.login}}</p>
+    <p class="card__language">Language: {{data.language || 'not difine'}}</p>
+    <p class="card__stars">Stars: {{data.stargazers_count}}</p>
+  </div>
+</div>
+<p ng-show="!repoData.length" class="not-found">No repositories found</p>
+<div class="paginate__container">
+  <button class="paginate__btn button" ng-click="$ctrl.getPrevPage()">Prev</button>
+  <span class="paginate__page">{{page}}</span>
+  <button class="paginate__btn button" ng-click="$ctrl.getNextPage()">Next</button>
+</div>
